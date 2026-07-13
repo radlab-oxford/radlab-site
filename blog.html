@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — RADLab, Oxford</title>
+<meta name="description" content="Notes and posts from the Reconfigurable and Adaptive Designs Lab (RADLab), University of Oxford.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #101010;
+    --grey: #747474;
+    --c5: #d95d4e; --c5t: #d2402f;   /* blog */
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #fff;
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 120px;
+  }
+
+  a { color: inherit; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+  .back { font-size: 13px; color: var(--grey); }
+  .back a { color: var(--grey); }
+
+  h1 {
+    margin-top: 28px;
+    font-size: clamp(40px, 9vw, 80px);
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: var(--c5);
+  }
+  h1 small {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--grey);
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .lede { margin-top: 20px; }
+
+  .label {
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c5t);
+  }
+  .cols {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 26px;
+    align-items: start;
+  }
+  @media (max-width: 700px) { .cols { grid-template-columns: 1fr; } }
+  .col figure { margin: 0 0 26px; }
+  /* collapsed columns show only their three most recent entries */
+  .col:not(.open) figure:nth-of-type(n+4) { display: none; }
+  .frame {
+    aspect-ratio: 16 / 9;
+    border: 1.5px solid var(--ink);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .frame iframe, .frame img { width: 100%; height: 100%; border: 0; display: block; object-fit: cover; }
+  .frame .placeholder { font-size: 11px; color: var(--grey); padding: 4px; text-align: center; }
+  figcaption { margin-top: 7px; font-size: 12.5px; font-weight: 500; line-height: 1.45; }
+  .col figure > figcaption:only-child { border-top: 1.5px solid var(--ink); padding-top: 9px; margin-top: 0; }
+  figcaption .meta { display: block; font-weight: 400; font-size: 11.5px; color: var(--grey); margin-top: 2px; }
+  figcaption .meta a { color: var(--c5t); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .more {
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    background: none;
+    border: 1.5px solid var(--ink);
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  .more:hover { background: var(--ink); color: #fff; }
+  .chan { margin-top: 16px; font-size: 13px; color: var(--grey); }
+  .chan a { color: var(--c5t); }
+
+  footer { margin-top: 100px; font-size: 12px; color: var(--grey); }
+</style>
+<noscript><style>
+  /* without JavaScript, show every entry and hide the non-functional buttons */
+  .col:not(.open) figure:nth-of-type(n+4) { display: block; }
+  .more { display: none; }
+</style></noscript>
+</head>
+<body>
+
+<p class="back"><a href="index.html">&larr; RADLab</a></p>
+
+<h1><small>05</small>blog</h1>
+<p class="lede">Videos from the lab: things that snapped, things that didn't, and what we learned either way.</p>
+
+<div class="cols">
+<div class="col">
+  <p class="label" role="heading" aria-level="2">Videos</p>
+  <figure>
+    <div class="frame"><iframe src="https://www.youtube.com/embed/K7KTpjZHVac" title="Unidirectional hopping robot" allowfullscreen loading="lazy"></iframe></div>
+    <figcaption>Unidirectional hopping robot<span class="meta">four self-sensing oscillating actuators · 2025</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><iframe src="https://www.youtube.com/embed/-wBxDB_N-Vc" title="Crawling robot that senses the end of the terrain" allowfullscreen loading="lazy"></iframe></div>
+    <figcaption>Crawling robot that senses the edge<span class="meta">passively synchronized actuators · 2025</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><iframe src="https://www.youtube.com/embed/uevBEMnAs4g" title="Programmable granular entanglement gripping" allowfullscreen loading="lazy"></iframe></div>
+    <figcaption>Programmable granular entanglement<span class="meta">magnetic grains gripping tangle-prone objects · 2025</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><iframe src="https://www.youtube.com/embed/cO6KxS4XXlE" title="Aerodynamic textiles that dimple like a golf ball" allowfullscreen loading="lazy"></iframe></div>
+    <figcaption>Aerodynamic textiles that dimple on demand<span class="meta">programmable surface dimpling · 2025</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><iframe src="https://www.youtube.com/embed/chW-s38GNbc?start=28" title="RADLab research video" allowfullscreen loading="lazy"></iframe></div>
+    <figcaption>[Video title]<span class="meta">youtube · [year]</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><iframe src="https://www.youtube.com/embed/videoseries?list=UUYDV2Dnq3QwmufsMRSPMv3A" title="RADLab latest uploads" allowfullscreen loading="lazy"></iframe></div>
+    <figcaption>Latest from the lab<span class="meta">auto-updating uploads playlist</span></figcaption>
+  </figure>
+  <button class="more" aria-expanded="false">more +</button>
+  <p class="chan">All videos on <a href="https://www.youtube.com/@RADlab_Oxford">youtube.com/@RADlab_Oxford</a>.</p>
+</div>
+<div class="col">
+  <p class="label" role="heading" aria-level="2">Press</p>
+  <figure>
+    <div class="frame"><img src="https://edition.pagesuite.com/get_image.aspx?w=700&eid=a8b2bf12-ece6-4e11-bfaf-31a4db2ba776&pnum=1" alt="ScienceVega June 2026 edition front page" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/sciencevega-2026.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/sciencevega-2026.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>RADLab featured in ScienceVega<span class="meta">ScienceVega · June 2026 · <a href="https://edition.pagesuite.com/html5/reader/production/default.aspx?pubname=&amp;edid=a8b2bf12-ece6-4e11-bfaf-31a4db2ba776">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://www.asme.org/getmedia/8bc45a53-f177-4a31-be8c-c54feb4926eb/0519_soft-robot_hero-v2.jpg?width=854&height=480&ext=.jpg" alt="ASME article — soft gripper lifting objects" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/asme-2026.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/asme-2026.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>Soft Robots Made Fast and Cheap<span class="meta">ASME · May 2026 · <a href="https://www.asme.org/topics-resources/content/soft-robots-made-fast-and-cheap">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/linkedin-2026.jpg" alt="LinkedIn post snapshot" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/linkedin-2026.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>[Post headline]<span class="meta">LinkedIn · April 2026 · <a href="https://www.linkedin.com/feed/update/urn:li:activity:7448643916448509952/">view post ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/robosoft-award-2026.jpg" alt="Best Extended Abstract award at IEEE RoboSoft 2026" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/robosoft-award-2026.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Best Extended Abstract at IEEE RoboSoft 2026 — Yuxuan Wang &amp; Antonio Forte, selected from over 220 submissions<span class="meta">IEEE RoboSoft · Kanazawa · April 2026</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/techxplore-2026.jpg" alt="TechXplore article snapshot" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/techxplore-2026.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>New ultra-low-cost technique could slash the price of soft robotics<span class="meta">TechXplore · March 2026 · <a href="https://techxplore.com/news/2026-03-ultra-technique-slash-price-soft.html">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/bioengineer-2026.jpg" alt="Bioengineer.org article snapshot" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/bioengineer-2026.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Breakthrough ultra-low-cost method promises to drastically reduce soft robotics prices<span class="meta">Bioengineer.org · March 2026 · <a href="https://bioengineer.org/breakthrough-ultra-low-cost-method-promises-to-drastically-reduce-soft-robotics-prices/">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://www.pmb.ox.ac.uk/sites/default/files/2025-11/ig1a0155_preferred.jpg" alt="Professor Antonio Forte, Tutorial Fellow in Engineering Science at Pembroke College" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/pembroke-2025.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/pembroke-2025.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>New Fellows Welcomed to Pembroke — Prof. Forte, Tutorial Fellow in Engineering Science<span class="meta">Pembroke College, Oxford · November 2025 · <a href="https://www.pmb.ox.ac.uk/news/new-fellows-welcomed-pembroke-0">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://eng.ox.ac.uk/media/qlioqivp/crawler-screenshot.jpg?width=850&height=450&format=webp&quality=75&v=1dd0e2c3bc6ff30" alt="Crawling robot sensing the end of the terrain" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/oxeng-2025.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/oxeng-2025.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>Oxford Engineering researchers develop 'brain-free' robots that move in sync, powered entirely by air<span class="meta">Oxford Engineering Science · November 2025 · <a href="https://eng.ox.ac.uk/news/oxford-engineering-researchers-develop-brain-free-robots-that-move-in-sync-powered-entirely-by-air">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://seas.harvard.edu/sites/default/files/styles/opengraph/public/2025-09/IMG_9146.jpg?itok=lRRCjvKv" alt="Dimpled textile metamaterial" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/seas-speed-2025.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/seas-speed-2025.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>The Need for Speed — textiles that dimple like a golf ball<span class="meta">Harvard SEAS · October 2025 · <a href="https://seas.harvard.edu/news/need-speed-0">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://eng.ox.ac.uk/media/0qcnomqk/new-academics-oct-25.jpg?rxy=0.4910797590168741,0.43880729332961965&width=850&height=450&format=webp&quality=75&v=1dc43eaebee1810" alt="New academics at the Department of Engineering Science, October 2025" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/oxeng-newacademics-2025.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/oxeng-newacademics-2025.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>New academics at the Department of Engineering Science — Prof. Forte joins Oxford and Pembroke College<span class="meta">Oxford Engineering Science · October 2025 · <a href="https://eng.ox.ac.uk/news/new-academics-at-the-department-of-engineering-science">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://www.kcl.ac.uk/newimages/nmes/news/anto-and-ash-feature/ashkan-rajenzad-and-anto-forte.x7b432c6f.png?f=webp" alt="Ashkan Rezanejad and Antonio Forte" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/kcl-2025.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/kcl-2025.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>Gripping Success with Both Hands — on programmable entanglement and The Weird Gripper Company<span class="meta">King's College London · September 2025 · <a href="https://www.kcl.ac.uk/gripping-success-with-both-hands-with-ashkan-rajenzad-and-dr-antonio-forte">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://www.kcl.ac.uk/newimages/nmes/news/cate-awards/cate-awards-2.x26e9383a.png?f=webp" alt="CATE award team at King's Engineering" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/kcl-cate-2025.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/kcl-cate-2025.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>King's Engineering Team win national education excellence award (CATE)<span class="meta">King's College London · August 2025 · <a href="https://www.kcl.ac.uk/news/kings-engineering-team-win-national-education-excellence-award">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/ftn-2025.jpg" alt="Functionality through Nonlinearity 2025" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/ftn-2025.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>We do love nonlinear science! Stories from the front line of Functionality through Nonlinearity 2025<span class="meta">King's College London · 2025 · <a href="https://www.kcl.ac.uk/we-do-love-nonlinear-science-stories-from-the-front-line-of-functionality-through-nonlinearity-2025">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/kcl-oscillators-2024.jpg" alt="Fluidic oscillators for soft robots" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/kcl-oscillators-2024.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>New breakthrough helps free up space for robots to 'think', say scientists<span class="meta">King's College London · 2024 · <a href="https://www.kcl.ac.uk/news/new-breakthrough-helps-free-up-space-for-robots-to-think-say-scientists">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/seas-cylinders-2024.jpg" alt="Complex motions, simple actuators" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/seas-cylinders-2024.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Complex motions, simple actuators<span class="meta">Harvard SEAS · 2024 · <a href="https://seas.harvard.edu/news/complex-motions-simple-actuators">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/kcl-inflate-shapes.jpg" alt="From 2D to 3D — inflatable shapes" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/kcl-inflate-shapes.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>From 2D to 3D: how to inflate shapes<span class="meta">King's College London · <a href="https://www.kcl.ac.uk/news/from-2d-to-3d-how-to-inflate-shapes">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://www.kcl.ac.uk/newimages/nmes/main-article-780x450/nmes-education-awards-antonio.x7b2c5852.png?f=webp" alt="Antonio Forte receiving the NMES Education Award" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/kcl-eduaward-2023.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/kcl-eduaward-2023.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>Expanding Opportunities — Antonio Forte recognised at the NMES Education Awards<span class="meta">King's College London · July 2023 · <a href="https://www.kcl.ac.uk/teaching-excellence-celebrated-at-faculty-education-awards">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/kcl-rovers.jpg" alt="Students building space rovers" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/kcl-rovers.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Engineering students learn mechanics, robotics and controls by making space rovers<span class="meta">King's College London · <a href="https://www.kcl.ac.uk/engineering-students-learn-mechanics-robotics-and-controls-by-making-space-rovers">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/kcl-flf-2023.jpg" alt="UKRI Future Leaders Fellowship" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/kcl-flf-2023.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Antonio Forte awarded a UKRI Future Leaders Fellowship<span class="meta">King's College London · 2023 · <a href="https://www.kcl.ac.uk/news/ukri-future-leader-fellowships-2023">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/kcl-meet-anto.jpg" alt="Meet Dr Antonio Forte" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/kcl-meet-anto.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Meet Dr Antonio Forte<span class="meta">King's College London · <a href="https://www.kcl.ac.uk/meet-dr-antonio-forte">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/physorg-2022.jpg" alt="Porous inclined metamaterials" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/physorg-2022.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Discovering unexplored dimensions in porous metamaterials<span class="meta">Phys.org · March 2022 · <a href="https://phys.org/news/2022-03-unexplored-dimensions-porous-metamaterials.html">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/seas-eml-2022.jpg" alt="Porous inclined metamaterials, Harvard SEAS" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/seas-eml-2022.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Unexplored dimensions in porous metamaterials<span class="meta">Harvard SEAS · 2022 · <a href="https://seas.harvard.edu/news/unexplored-dimensions-porous-metamaterials">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/seas-ml-2022.jpg" alt="Machine learning for morphable materials" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/seas-ml-2022.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Machine learning for morphable materials<span class="meta">Harvard SEAS · 2022 · <a href="https://seas.harvard.edu/news/machine-learning-morphable-materials">read ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="news/seas-balloons-2020.jpg" alt="Programmable kirigami balloons" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/seas-balloons-2020.jpg ]&lt;/span&gt;'"></div>
+    <figcaption>Programmable balloons pave the way for new shape-morphing devices<span class="meta">Harvard SEAS · 2020 · <a href="https://seas.harvard.edu/news/programmable-balloons-pave-way-new-shape-morphing-devices">read ↗</a></span></figcaption>
+  </figure>
+  <button class="more" aria-expanded="false">more +</button>
+</div>
+<div class="col">
+  <p class="label" role="heading" aria-level="2">Talks &amp; events</p>
+  <figure>
+    <figcaption>The future of physical control: intelligence in mechanical matter<span class="meta">invited talk · FTN2026 Conference, KU Leuven · June 2026</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Mechanical Metamaterials: blurring the line between machines and matter<span class="meta">Distinguished Lecture · University of Southampton · May 2026</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://lh3.googleusercontent.com/sitesv/AA5AbUByiDxjOSNDjUzlVR2b_uC0qFWF_yqEqkfnzZtkrjwIShXu4LIm842k2aeElL_oR7CJNAHYgBIs7TF_JzM2oVb8ue5bYvwkO6tKFqKL1xfMtjAGkEPuoEkLjnhXd-rrwiE_RgIsrRp4xj8q_QKBqsImokDVdIR0ZqZbelv7SbVGla-lmr5fQY2W3UHTowSybhXrGkEW_5x9rZBhIMLQ4f8cBHh1JCHYDWQFZDe20pk=w1280" alt="Nonlinear Physical Intelligence in Soft Machines workshop" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/robosoft-ws-2026.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/robosoft-ws-2026.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>Nonlinear Physical Intelligence in Soft Machines<span class="meta">invited talk · RoboSoft 2026 workshop · Kanazawa, April 2026 · <a href="https://sites.google.com/view/rs2026wsnpism/home">workshop site ↗</a></span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Soft Robotics PhD Conference<span class="meta">invited talk · KU Leuven · November 2024</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Bertoldi Applied Mechanics Seminar<span class="meta">invited talk · Harvard University · October 2024</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="https://www.nilesconf.org/history/2024/assets/img/Highlights/5.jpeg" alt="NILES2024 conference at Nile University" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='news/niles-2024.jpg';}else{this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ news/niles-2024.jpg ]&lt;/span&gt;'}"></div>
+    <figcaption>NILES2024 — IEEE<span class="meta">keynote · Nile University · October 2024</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Hamlyn Symposium<span class="meta">invited talk · Imperial College London · June 2024</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>AMOLF workshop<span class="meta">invited talk · AMOLF, Amsterdam · May 2024</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>OncoEng Conference<span class="meta">keynote · Imperial College London · January 2024</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>5th UK Robot Manipulation Workshop<span class="meta">invited talk · University of Oxford · January 2024</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Solid Mechanics and Materials Engineering Seminar<span class="meta">invited talk · University of Oxford · November 2023</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Lighten workshop<span class="meta">invited talk · UCL · October 2023</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Shape Morphing Metamaterials Workshop, UKMMN<span class="meta">invited talk · University of Bath · September 2023</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Automorph Workshop<span class="meta">invited talk · Somerset House, London · June 2023</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Softlab Seminar Series<span class="meta">invited talk · University of Bristol · June 2022</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Lighten workshop<span class="meta">invited talk · UCL · May 2022</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>SIAMM21<span class="meta">keynote · February 2021</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Department of Mechanical Engineering seminar<span class="meta">invited talk · UCL · January 2021</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Department of Mechanical Engineering seminar<span class="meta">invited talk · University of Warwick · October 2020</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>MSE2020<span class="meta">keynote · September 2020</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>EMI2020<span class="meta">invited talk · Columbia University · May 2020 (cancelled due to COVID)</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Department of Mechanical Engineering seminar<span class="meta">invited talk · Boston University · March 2020</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Department of Bioengineering seminar<span class="meta">invited talk · Imperial College London · February 2020</span></figcaption>
+  </figure>
+  <figure>
+    <figcaption>Moss Lab Seminar Series<span class="meta">invited talk · Boston University · January 2020</span></figcaption>
+  </figure>
+  <button class="more" aria-expanded="false">more +</button>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.more').forEach(b => {
+  b.addEventListener('click', () => {
+    const open = b.parentElement.classList.toggle('open');
+    b.textContent = open ? 'less \u2212' : 'more +';
+    b.setAttribute('aria-expanded', open);
+  });
+});
+</script>
+
+<footer>
+  <p>RADLab · Reconfigurable and Adaptive Designs Lab · University of Oxford</p>
+</footer>
+
+<p style="margin-top:64px;font-size:12px;color:var(--grey)"><a href="accessibility.html">accessibility</a></p>
+</body>
+</html>

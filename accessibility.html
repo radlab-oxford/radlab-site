@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility — RADLab</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --grey: #747474;
+    --accent: #0c836b;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    color: var(--ink);
+    background: #fff;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+  .back { display: inline-block; margin-bottom: 40px; font-size: 13px; text-decoration: none; }
+  .back:hover { text-decoration: underline; text-underline-offset: 4px; }
+  h1 { font-size: clamp(28px, 6vw, 44px); font-weight: 600; letter-spacing: -0.03em; margin: 0 0 28px; }
+  h2 { font-size: 15px; font-weight: 600; margin: 36px 0 10px; }
+  p { margin: 0 0 14px; }
+  .email { white-space: nowrap; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<a class="back" href="index.html">← index</a>
+
+<h1>Accessibility statement</h1>
+
+<p>This statement applies to the website of the Reconfigurable and Adaptive Designs Lab (RADLab), Department of Engineering Science, University of Oxford.</p>
+
+<p>We are committed to providing an accessible web presence that gives members of the public and members of the University community full access to information about the lab, its research, and its activities. The University of Oxford's <a href="https://edu.admin.ox.ac.uk/equality-policy">Equality Policy</a> outlines its commitment to a culture which maintains a working, learning and social environment in which the rights and dignity of all its staff and students are respected.</p>
+
+<h2>Our aims</h2>
+<p>In order to ensure that all of our visitors can use this website, these pages aim to meet the Level AA standard of the <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a>. This includes providing text alternatives for all informative images, sufficient colour contrast for all text, a logical structure with appropriately ordered and labelled content, and ensuring that the site can be navigated and operated with just a keyboard, with speech recognition tools, or with a screen reader. Keyboard focus is always visible, and the interactive arch on the home page can be operated with the Enter or Space key. All page content remains available when JavaScript is disabled. Animated and moving content, including the decorative generative background, is disabled for visitors whose systems request reduced motion, and the background is hidden from assistive technologies.</p>
+
+<h2>Making changes to your device or system</h2>
+<p><a href="https://mcmw.abilitynet.org.uk/">AbilityNet</a> has advice on making your device easier to use if you have a disability, covering all major operating systems.</p>
+
+<h2>How accessible this website is</h2>
+<p>We are aware that some parts of this website are not fully accessible. Embedded YouTube videos depend on YouTube's player and on the captions supplied with each video, and some video content may not yet have full audio description. Some journal cover images and press snapshots are hosted by external publishers. CVs of lab members are provided as PDF files, and some of these documents may not be fully accessible to screen reader software.</p>
+
+<h2>Feedback and alternative formats</h2>
+<p>If you need any information from this website in an alternative format, please contact us at <span class="email">antonio [dot] forte [at] eng.ox.ac.uk</span> and we will consider the request and respond as soon as we can. Students and staff of the University may also make use of the free <a href="https://www.bodleian.ox.ac.uk/using/sensusaccess">SensusAccess tool on the Bodleian Libraries website</a> to convert certain types of files into more accessible formats such as accessible text, audio, e-book or digital braille.</p>
+
+<h2>Reporting accessibility problems with this website</h2>
+<p>If you have any questions or concerns about this statement or the accessibility of these pages, or you think we are not meeting accessibility requirements, please contact us at <span class="email">antonio [dot] forte [at] eng.ox.ac.uk</span>.</p>
+
+<h2>Enforcement procedure</h2>
+<p>The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the 'accessibility regulations'). If you're not happy with how we respond to your complaint, contact the <a href="https://www.equalityadvisoryservice.com/">Equality Advisory and Support Service (EASS)</a>.</p>
+
+<h2>Other accessibility resources</h2>
+<p>For more information about accessibility resources for students, staff and visitors in Oxford, please visit the University's <a href="https://edu.admin.ox.ac.uk/disability-support">Equality and Diversity pages</a>. For information on building accessibility, please try the <a href="https://www.accessguide.ox.ac.uk/">Access Guide</a> or the <a href="https://maps.ox.ac.uk/">University's interactive map</a>.</p>
+
+<h2>Technical information about this website's accessibility</h2>
+<p>RADLab is committed to making this website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018. This website is fully compliant with the Web Content Accessibility Guidelines version 2.2 AA standard, with the exception of the third-party content described under 'How accessible this website is', which is neither funded nor developed by us and is not under our control; such content is exempt under the accessibility regulations.</p>
+
+<h2>What we're doing to improve accessibility</h2>
+<p>We review the accessibility of new content as it is added, including alternative text for new images, captions for new videos, and colour contrast for any additions to the design.</p>
+
+<h2>Preparation of this accessibility statement</h2>
+<p>This statement was prepared on 12 July 2026. The website was tested in July 2026 by self-assessment against WCAG 2.2 AA, comprising a manual check of every page including keyboard-only operation, computed verification of the colour contrast of all text styles, and inspection of the site with JavaScript disabled and with reduced motion enabled.</p>
+
+<script>
+  document.querySelectorAll('.email').forEach(el => {
+    el.textContent = ['antonio', 'forte'].join('.') + String.fromCharCode(64) + ['eng', 'ox', 'ac', 'uk'].join('.');
+  });
+</script>
+</body>
+</html>
