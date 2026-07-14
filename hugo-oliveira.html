@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hugo Oliveira — RADLab, Oxford</title>
+<meta name="description" content="Hugo Oliveira, Marie Skłodowska-Curie Fellow at the Reconfigurable and Adaptive Designs Lab (RADLab), University of Oxford.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #101010;
+    --grey: #747474;
+    --c2: #3a7ca5; --c2t: #397ba3; --name: #3a7ca5;   /* people */
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #fff;
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 120px;
+  }
+
+  a { color: var(--c2t); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+  .back { font-size: 13px; }
+  .back a { color: var(--grey); }
+
+  h1 {
+    margin-top: 28px;
+    font-size: clamp(34px, 7.5vw, 64px);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: var(--name);
+  }
+  h1 .nick { color: var(--grey); font-weight: 400; font-size: 0.45em; letter-spacing: 0; }
+  .role { margin-top: 10px; font-size: 13px; color: var(--grey); }
+
+  .label {
+    margin-top: 56px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c2);
+  }
+
+  ul { list-style: none; }
+  li { padding: 5px 0; padding-left: 20px; text-indent: -20px; }
+  li::before { content: "- "; color: var(--c2); }
+  .career li b { font-weight: 400; color: var(--grey); margin-right: 8px; }
+
+  .cv { margin-top: 44px; }
+  .cv a { font-weight: 600; }
+
+  footer { margin-top: 100px; font-size: 12px; color: var(--grey); }
+</style>
+</head>
+<body>
+
+<p class="back"><a href="../index.html">&larr; RADLab</a></p>
+
+<h1>Hugo Oliveira</h1>
+<p class="role">Marie Skłodowska-Curie Fellow · RADLab, University of Oxford</p>
+
+<p class="label" role="heading" aria-level="2">Research interests</p>
+<ul>
+  <li>[research interest]</li>
+  <li>[research interest]</li>
+  <li>[research interest]</li>
+</ul>
+
+<p class="label" role="heading" aria-level="2">Career path</p>
+<ul class="career">
+  <li><b>2025–</b>[Position], RADLab, University of Oxford</li>
+  <li><b>20xx–20xx</b>[Degree / position, institution]</li>
+  <li><b>20xx–20xx</b>[Degree / position, institution]</li>
+</ul>
+
+<p class="cv"><a href="cv.pdf">cv (pdf) ↗</a></p>
+
+<footer>
+  <p>RADLab · Reconfigurable and Adaptive Designs Lab · University of Oxford</p>
+</footer>
+
+<p style="margin-top:64px;font-size:12px;color:var(--grey)"><a href="../accessibility.html">accessibility</a></p>
+</body>
+</html>
