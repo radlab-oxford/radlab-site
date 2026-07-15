@@ -258,17 +258,17 @@
   <p class="label" role="heading" aria-level="2">03 / Recent papers</p>
   <ul>
     <li><span class="title">Vacuum–Laser Fabrication of Programmable Soft Actuators</span>
-      <span class="meta">Rezanejad, Mousa, Wang, Adlerstein, Yao &amp; Forte · Advanced Science · 2026 · <a href="https://doi.org/10.1002/advs.202522500">doi</a> · <a class="cover" href="art.html">cover ↗</a></span></li>
+      <span class="meta">Rezanejad, Mousa, Wang, Adlerstein, Yao &amp; Forte · Advanced Science · 2026 · <a href="https://doi.org/10.1002/advs.202522500" target="_blank" rel="noopener">doi</a> · <a class="cover" href="art.html">cover ↗</a></span></li>
     <li><span class="title">Hybrid Jamming–Magnetic Reconfigurable Soft Structures for Shape Morphing Robotics</span>
       <span class="meta">Yao, Wang, Rezanejad &amp; Forte · IEEE RoboSoft · 2026</span></li>
     <li><span class="title">Multifunctional Fluidic Units for Emergent, Responsive Robotic Behaviors</span>
-      <span class="meta">Mousa, Comoretto, Overvelde &amp; Forte · Advanced Materials · 2025 · <a href="https://doi.org/10.1002/adma.202510298">doi</a> · <a class="cover" href="art.html">cover ↗</a></span></li>
+      <span class="meta">Mousa, Comoretto, Overvelde &amp; Forte · Advanced Materials · 2025 · <a href="https://doi.org/10.1002/adma.202510298" target="_blank" rel="noopener">doi</a> · <a class="cover" href="art.html">cover ↗</a></span></li>
     <li><span class="title">Programmable Entanglement of Granular Mechanical Metamaterials</span>
-      <span class="meta">Rezanejad, Mousa, Lorenz, Howard &amp; Forte · Advanced Functional Materials · 2025 · <a href="https://doi.org/10.1002/adfm.202516484">doi</a> · <a class="cover" href="art.html">cover ↗</a></span></li>
+      <span class="meta">Rezanejad, Mousa, Lorenz, Howard &amp; Forte · Advanced Functional Materials · 2025 · <a href="https://doi.org/10.1002/adfm.202516484" target="_blank" rel="noopener">doi</a> · <a class="cover" href="art.html">cover ↗</a></span></li>
     <li><span class="title">Programmable Surface Dimpling of Textile Metamaterials for Aerodynamic Control</span>
-      <span class="meta">Farrell, McCann, Forte, Walsh &amp; Bertoldi · Advanced Materials · 2025 · <a href="https://doi.org/10.1002/adma.202505817">doi</a> · <a class="cover" href="art.html">cover ↗</a></span></li>
+      <span class="meta">Farrell, McCann, Forte, Walsh &amp; Bertoldi · Advanced Materials · 2025 · <a href="https://doi.org/10.1002/adma.202505817" target="_blank" rel="noopener">doi</a> · <a class="cover" href="art.html">cover ↗</a></span></li>
   </ul>
-  <p class="note" style="margin-top:20px; font-size:13px; color:var(--grey);">Full list on <a href="https://scholar.google.co.uk/citations?user=ssGb3UYAAAAJ&amp;hl=en">google scholar</a>.</p>
+  <p class="note" style="margin-top:20px; font-size:13px; color:var(--grey);">Full list on <a href="https://scholar.google.co.uk/citations?user=ssGb3UYAAAAJ&amp;hl=en" target="_blank" rel="noopener">google scholar</a>.</p>
 </section>
 
 <section id="contact">
@@ -278,12 +278,12 @@
     University of Oxford, Parks Road<br>
     Oxford OX1 3PJ, UK
   </address>
-  <p class="links" id="email-line"><span class="email" id="em1">antonio [dot] forte [at] eng.ox.ac.uk</span><a href="https://scholar.google.co.uk/citations?user=ssGb3UYAAAAJ&amp;hl=en">google scholar</a><a href="https://non-linearity.com">non-linearity.com</a></p>
+  <p class="links" id="email-line"><span class="email" id="em1">antonio [dot] forte [at] eng.ox.ac.uk</span><a href="https://scholar.google.co.uk/citations?user=ssGb3UYAAAAJ&amp;hl=en" target="_blank" rel="noopener">google scholar</a><a href="https://non-linearity.com" target="_blank" rel="noopener">non-linearity.com</a></p>
 </section>
 
 <footer>
   <p>RADLab · Reconfigurable and Adaptive Designs Lab · University of Oxford</p>
-  <p><a href="https://www.linkedin.com/in/radlab/">linkedin</a> · <a href="https://www.instagram.com/radlab_oxford/">instagram</a> · <a href="https://www.youtube.com/@RADlab_Oxford">youtube</a> · <a href="accessibility.html">accessibility</a></p>
+  <p><a href="https://www.linkedin.com/in/radlab/" target="_blank" rel="noopener">linkedin</a> · <a href="https://www.instagram.com/radlab_oxford/" target="_blank" rel="noopener">instagram</a> · <a href="https://www.youtube.com/@RADlab_Oxford" target="_blank" rel="noopener">youtube</a> · <a href="accessibility.html">accessibility</a></p>
 </footer>
 
 </div><!-- /content -->
@@ -299,6 +299,13 @@
   const DOWN = 'M 6 80 Q 320 175 634 80';
   let up = true;
 
+  // remember whether the menu has been opened, so returning to this page in the
+  // same browsing session keeps it open instead of requiring another arch click
+  const MENU_KEY = 'radlab-menu-open';
+  const remember = (open) => {
+    try { open ? sessionStorage.setItem(MENU_KEY, '1') : sessionStorage.removeItem(MENU_KEY); } catch (e) {}
+  };
+
   function snap() {
     arch.setAttribute('aria-expanded', String(arch.getAttribute('aria-expanded') !== 'true'));
     up = !up;
@@ -309,12 +316,14 @@
       arch.classList.remove('smile');
       document.getElementById('bloom').classList.remove('dim');
       caption.innerHTML = 'fig.1 — a bistable arch. <b>click it.</b>';
+      remember(false);
     } else {
       menu.classList.add('show');
       logo.classList.add('show');
       arch.classList.add('smile');
       document.getElementById('bloom').classList.add('dim');
       caption.innerHTML = 'fig.1 — snap-through. <b>menu unlocked.</b>';
+      remember(true);
     }
   }
 
@@ -339,6 +348,9 @@
   arch.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); snap(); }
   });
+
+  // on load, if the menu was opened earlier this session, snap it open right away
+  try { if (sessionStorage.getItem(MENU_KEY) === '1') snap(); } catch (e) {}
 </script>
 
 
