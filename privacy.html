@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Art — RADLab, Oxford</title>
-<meta name="description" content="Art from the Reconfigurable and Adaptive Designs Lab (RADLab), University of Oxford — where the mechanics is the picture.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy and cookies notice for the RADLab website, University of Oxford: the site sets no cookies, runs no analytics or tracking, self-hosts its fonts, and uses only a small functional browser preference.">
+<title>Privacy & cookies — RADLab</title>
 <style>
 @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2'); }
 @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2'); }
@@ -14,9 +14,10 @@
   :root {
     --ink: #101010;
     --grey: #747474;
-    --c4: #de6d00; --c4t: #b85a00;   /* art */
+    --c1: #0e9f82; --c1t: #0c836b;   /* research teal + AA text variant */
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     background: #fff;
     color: var(--ink);
@@ -28,49 +29,35 @@
     padding: 64px 24px 120px;
   }
 
-  a { color: inherit; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  a { color: var(--c1t); text-underline-offset: 4px; text-decoration-thickness: 1px; }
   a:hover { text-decoration-thickness: 2px; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
-  .back { font-size: 13px; color: var(--grey); }
+  .back { font-size: 13px; }
   .back a { color: var(--grey); }
 
   h1 {
     margin-top: 28px;
-    font-size: clamp(40px, 9vw, 80px);
+    margin-bottom: 28px;
+    font-size: clamp(34px, 7.5vw, 64px);
     font-weight: 600;
-    letter-spacing: -0.05em;
-    line-height: 1;
-    color: var(--c4);
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: var(--c1);
   }
-  h1 small {
+
+  h2 {
+    margin-top: 56px;
+    margin-bottom: 14px;
     font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0;
-    color: var(--grey);
-    margin-right: 12px;
-    vertical-align: middle;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c1t);
   }
-  .lede { margin-top: 20px; }
 
-  .gallery { margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 44px 28px; }
-  @media (max-width: 560px) { .gallery { grid-template-columns: 1fr; } }
-  .frame {
-    aspect-ratio: 3 / 4;
-    border: 1.5px solid var(--ink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .frame .placeholder { font-size: 12.5px; color: var(--grey); }
-  figcaption { margin-top: 8px; font-size: 13.5px; font-weight: 500; }
-  figcaption .meta { display: block; font-weight: 400; font-size: 12.5px; color: var(--grey); }
-  figcaption .meta b { color: var(--c4t); font-weight: 400; }
-  figcaption .meta a { color: var(--c4t); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
-
-  footer { margin-top: 100px; font-size: 12px; color: var(--grey); }
+  p { margin: 0 0 14px; }
+  .email { white-space: nowrap; }
   #bloom {
     position: fixed;
     inset: 0;
@@ -82,6 +69,7 @@
     transition: opacity 1.2s ease;
   }
   #bloom.dim { opacity: 0.55; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
@@ -92,59 +80,40 @@
 
 <main>
 
-<h1><small>04</small>art</h1>
-<p class="lede">We enjoy drawing our own graphical interpretations of our work. The ones below were awarded journal covers.</p>
+<h1>Privacy and cookies</h1>
 
-<div class="gallery">
-  <figure>
-    <div class="frame"><img src="covers/advs-2026.jpg" alt="Advanced Science 2026 cover — vacuum–laser fabrication of programmable soft actuators" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/advs-2026.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Vacuum–Laser Fabrication of Programmable Soft Actuators<span class="meta"><b>cover,</b> Advanced Science 2026 · <a href="https://doi.org/10.1002/advs.75582" target="_blank" rel="noopener">doi</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/adma-16-2026.jpg" alt="Advanced Materials 16/2026 cover — multifunctional fluidic units" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/adma-16-2026.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Multifunctional Fluidic Units for Emergent, Responsive Robotic Behaviors<span class="meta"><b>cover,</b> Advanced Materials 16/2026 · <a href="https://doi.org/10.1002/adma.72678" target="_blank" rel="noopener">doi</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/adfm-41-2025.jpg" alt="Advanced Functional Materials 41/2025 cover — programmable granular entanglement" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/adfm-41-2025.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Programmable Entanglement of Granular Mechanical Metamaterials<span class="meta"><b>cover,</b> Advanced Functional Materials 41/2025 · <a href="https://doi.org/10.1002/adfm.71971" target="_blank" rel="noopener">doi</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/adma-40-2025.jpg" alt="Advanced Materials 40/2025 cover — programmable surface dimpling of textile metamaterials" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/adma-40-2025.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Programmable Surface Dimpling of Textile Metamaterials for Aerodynamic Control<span class="meta"><b>cover,</b> Advanced Materials 40/2025 · <a href="https://doi.org/10.1002/adma.70711" target="_blank" rel="noopener">doi</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/advs-43-2024.jpg" alt="Advanced Science 43/2024 cover — frequency-controlled fluidic oscillators" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/advs-43-2024.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Frequency-Controlled Fluidic Oscillators for Soft Robots<span class="meta"><b>cover,</b> Advanced Science 43/2024 · <a href="https://doi.org/10.1002/advs.202470264" target="_blank" rel="noopener">doi</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/adma-46-2024.jpg" alt="Advanced Materials 46/2024 cover — programmable sequential instabilities in soft cylinders" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/adma-46-2024.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Complex Deformation in Soft Cylindrical Structures via Programmable Sequential Instabilities<span class="meta"><b>cover,</b> Advanced Materials 46/2024 · <a href="https://doi.org/10.1002/adma.202470368" target="_blank" rel="noopener">doi</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/adfm-20-2023.jpg" alt="Advanced Functional Materials 20/2023 cover — chiral mechanical metamaterials" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/adfm-20-2023.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Chiral Mechanical Metamaterials for Tunable Optical Transmittance<span class="meta"><b>cover,</b> Advanced Functional Materials 20/2023 · <a href="https://doi.org/10.1002/adfm.202370123" target="_blank" rel="noopener">doi</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/adfm-35-2022.jpg" alt="Advanced Functional Materials 35/2022 cover — inflatable origami" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/adfm-35-2022.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Inflatable Origami: Multimodal Deformation via Multistability<span class="meta"><b>cover,</b> Advanced Functional Materials 35/2022 · <a href="https://doi.org/10.1002/adfm.202270196" target="_blank" rel="noopener">doi</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/eml-51-2022.jpg" alt="Extreme Mechanics Letters 51/2022 cover — porous inclined mechanical metamaterials" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/eml-51-2022.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Surface Texture Modulation via Buckling in Porous Inclined Mechanical Metamaterials<span class="meta"><b>cover,</b> Extreme Mechanics Letters 51/2022 · <a href="https://www.sciencedirect.com/journal/extreme-mechanics-letters/vol/51/suppl/C" target="_blank" rel="noopener">issue</a></span></figcaption>
-  </figure>
-  <figure>
-    <div class="frame"><img src="covers/adma-33-2020.jpg" alt="Advanced Materials 33/2020 cover — kirigami-inspired inflatables" onerror="this.outerHTML='&lt;span class=&quot;placeholder&quot;&gt;[ covers/adma-33-2020.jpg ]&lt;/span&gt;'"></div>
-    <figcaption>Kirigami-Inspired Inflatables with Programmable Shapes<span class="meta"><b>cover,</b> Advanced Materials 33/2020 · <a href="https://doi.org/10.1002/adma.202070250" target="_blank" rel="noopener">doi</a> · cover art by A.E. Forte</span></figcaption>
-  </figure>
-</div>
+<p>This notice explains how the website of the Reconfigurable and Adaptive Designs Lab (RADLab), Department of Engineering Science, University of Oxford, handles information about the people who visit it. It applies to this website only. It does not cover the University of Oxford's central web services, nor any external website that these pages link to.</p>
+
+<h2>The short version</h2>
+<p>This is a static informational website. It has no user accounts, no login, no contact forms, and no comment sections. It does not ask you for personal information, and it runs no analytics, no advertising, and no visitor tracking of any kind. It sets no cookies.</p>
+
+<h2>Browser storage</h2>
+<p>The site uses a small amount of browser storage for a single functional purpose. When you open the navigation menu on the home page, the site records that choice so that the menu stays open if you return to the home page during the same visit, which saves you from opening it again. This preference is held only in your own browser using session storage. It is never transmitted to us or to anyone else, it contains no personal information, and it is deleted automatically when you close the browser tab. Under the Privacy and Electronic Communications Regulations, storing a preference that you have set yourself, with no tracking or profiling, does not require a consent banner. You can clear it at any time through your browser settings, and turning off browser storage does not stop the site from working.</p>
+
+<h2>Fonts</h2>
+<p>The typeface used across the site, IBM Plex Mono, is served directly from this website rather than from a third-party font service. Viewing the site therefore does not send any request, or reveal your IP address, to an outside font provider.</p>
+
+<h2>Hosting</h2>
+<p>The site is hosted on GitHub Pages. As with almost any web host, GitHub may record standard technical information such as IP addresses and browser details in its server logs, in order to deliver the site and protect it against abuse. This processing is carried out by GitHub as the hosting provider and is described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+<h2>Links to other websites</h2>
+<p>These pages link to external resources, including published papers, academic profiles, and social media. Once you follow such a link you are on a separate website, governed by its own privacy policy, and this notice no longer applies. A small number of images may also fall back to a publisher's or host's own server if the local copy cannot be loaded.</p>
+
+<h2>Contact</h2>
+<p>If you have any questions about this notice, please contact us at <span class="email">antonio [dot] forte [at] eng.ox.ac.uk</span>.</p>
+
+<h2>Changes to this notice</h2>
+<p>This notice was last updated in July 2026. If the way this website handles information changes, this page will be updated to reflect it.</p>
 
 </main>
 
-<footer>
-  <p>RADLab · Reconfigurable and Adaptive Designs Lab · University of Oxford</p>
-</footer>
+<p style="margin-top:64px;font-size:12px;color:var(--grey)"><a href="accessibility.html">accessibility</a></p>
 
-<p style="margin-top:64px;font-size:12px;color:var(--grey)"><a href="accessibility.html">accessibility</a> · <a href="privacy.html">privacy</a></p>
+<script>
+  document.querySelectorAll('.email').forEach(el => {
+    el.textContent = ['antonio', 'forte'].join('.') + String.fromCharCode(64) + ['eng', 'ox', 'ac', 'uk'].join('.');
+  });
+</script>
 <script>
   // Mode-shape bloom, after Nigina: a lattice of dots driven by slowly
   // morphing standing-wave modes. Flower-like patterns emerge, fragment,
